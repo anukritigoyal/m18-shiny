@@ -1,5 +1,6 @@
 # server.R
 library(dplyr)
+library(plotly)
 
 # Read in data
 setwd('~/Documents/info-201/m14-shiny/exercise-3/')
@@ -18,6 +19,6 @@ shinyServer(function(input, output) {
   
   # Render a plotly object that returns your map
   output$map <- renderPlotly({ 
-      return(BuildMap(joined.data, 'population'))
+      return(BuildMap(joined.data, input$mapvar))
   })
 })

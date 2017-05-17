@@ -4,7 +4,7 @@
 shinyUI(fluidPage(
   
   # Add a numbericInput to choose the number of observations
-  
+  numericInput
   
   # Add a selectInput that allows you to select a color from a list of choices
   
